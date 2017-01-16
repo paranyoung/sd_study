@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>회원가입</title>
+</head>
+<body>
+  <fieldset>
+  <legend><small>회원가입 양식</small></legend>
+  <table border="1" width="100%" summary="회원가입">
+    <caption><h1>회원가입</h1></caption> <br />
+    <colgroup>
+      <col width="150">
+    </colgroup>
+        <tbody>
+        <tr>
+        <td>이름</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td><input type="radio" name="gender" value="man">남 <input type="radio" name="gender" value="femail">여</td>
+      </tr>
+      <tr>
+        <td><label for="user"></label>아이디</td>
+        <td><input type="text" name="username" id="user"><input type="button" name="" value="중복확인"></td>
+      </tr>
+      <tr>
+        <td><label for="pq">비밀번호</label></td>
+        <td><input type="text" name="password" id="pw"></td>
+      </tr>
+      <tr>
+        <td><label for="pw">비밀번호 재입력</label></td>
+        <td><input type="text" name="password2" id="pw"></td>
+      </tr>
+      <tr>
+        <td>주소</td>
+        <td><input type="text" name="address" >@<input type="text" name="address">
+          <select>
+            <option>daum.net</option>
+            <option>gmail.com</option>
+            <option>naver.com</option>
+            <option>직접입력</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>전화번호</td>
+          <td><select>
+            <option>LGT</option>
+            <option>SKT</option>
+            <option>KT</option>
+            <option>기타</option>
+          </select> <input type="text" name="number1" ><input name="number2" type="text"></td>
+        </tr>
+        <tr>
+          <td>취미</td>
+          <td><input type="checkbox" name="hobby">여행 <input type="checkbox" name="bobby">쇼핑 <input type="checkbox" name="hobby">게입 <input type="checkbox" name="hobby">기타</td>
+        </tr>
+        <tr>
+          <td>자기소개</td>
+          <td><textarea ></textarea></td>
+        </tr>
+        <tr>
+        <td colspan="2">
+        <p><br />
+        <input type="submit" name="" value="완료"> <input type="submit" name="" value="다시입력"></p>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+    </fieldset>
+  </body>
+    </html>
