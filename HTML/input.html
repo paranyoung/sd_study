@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>input</title>
+</head>
+<body>
+  <dl>
+    <dt>한줄입력</dt>
+    <dd><input type="text"  placeholder="아이디"/></dd>
+    <dt>비밀번호</dt>
+    <dd><input type="text" name="PW" type= "password" /></dd>
+    <dt>단일선택</dt>
+    <dd><input type="radio" /></dd>
+    <dt>다중선택</dt>
+    <dd><input type="checkbox" /></dd>
+    <dt>파일선택</dt>
+    <dd><input type="file" /></dd>
+    <dt>초기화</dt>
+    <dd><input type="button" value="범용버튼"></dd>
+    <dt>전송</dt>
+    <dd><input type="reset" vlaue="reset" /></dd>
+    <dt>전송</dt>
+    <dd><input type="submit" vlaue="전송" /></dd>
+    <dt>텍스트 영역</dt>
+    <dd><textarea></textarea></dd>
+    <dd>
+      <select>
+        <option>직접입력</option>
+        <option>gmail.com</option>
+        <option>hanmail.net</option>
+      </select>
+    </dd>
+    <dt>color</dt>
+    <dd><input type="color"></dd>
+    <dt>날짜</dt>
+    <dd><input type="date"></dd>
+    <dt>color : <input type="color" ></dt>
+    <dt>date : <input type="date" ></dt>
+    <dt>datetime : <input type="datetime" ></dt>
+      <dt>datetime-local : <input type="datetime-local" ></dt>
+        <dt>email : <input type="date" ></dt>
+  </dl>
+
+  <div>
+    <fieldset>
+      <legend>필수입력항목</legend>
+      <form action="hello_world.html" method="get">
+        <p><label for="user">아이디</label> :<input type="text" name="username" id="user"placeholder="true"/></p>
+        <p><label for="pw"></label>비밀번호 : <input type="password" name="PW" id="pw" /></p>
+        <p>성별 :
+          <p><input type="radio"name="gender"value="man">남</p>
+          <p><input type="radio"name="gender"value="woman"checked="yes">여</p>
+          <p><input type="submit"></p>
+        </form>
+      </fieldset>
+    </div>
+
+  </body>
+  </html>
