@@ -8,34 +8,36 @@
   <fieldset>
   <legend><small>회원가입 양식</small></legend>
   <table border="1" width="100%" summary="회원가입">
-    <caption><h1>회원가입</h1></caption> <br />
+    <caption>회원가입</caption> <br />
     <colgroup>
-      <col width="150">
+      <col width="150" />
     </colgroup>
         <tbody>
         <tr>
-        <td>이름</td>
-        <td><input type="text" /></td>
+        <th><label for="x">이름</label></th>
+        <td><input type="text" id="x" /></td>
       </tr>
       <tr>
-        <td>성별</td>
-        <td><input type="radio" name="gender" value="man">남 <input type="radio" name="gender" value="femail">여</td>
+        <th><label for="gen">성별</label></th>
+        <td>
+          <input type="radio" name="gender" value="man"id="gen"><label for="gen">남 </label>
+          <input type="radio" name="gender" value="femail"id="gen"><label for="gen">여</label></td>
       </tr>
       <tr>
-        <td><label for="user"></label>아이디</td>
+        <th><label for="user">아이디</label></th>
         <td><input type="text" name="username" id="user"><input type="button" name="" value="중복확인"></td>
       </tr>
       <tr>
-        <td><label for="pq">비밀번호</label></td>
-        <td><input type="text" name="password" id="pw"></td>
+        <th><label for="pw">비밀번호</label></th>
+        <td><input type="text" name="password" id="pw"></label></td>
       </tr>
       <tr>
-        <td><label for="pw">비밀번호 재입력</label></td>
-        <td><input type="text" name="password2" id="pw"></td>
+        <th><label for="pw2">비밀번호 재입력</label></th>
+        <td><input type="text" name="password2" id="pw2"></label></td>
       </tr>
       <tr>
-        <td>주소</td>
-        <td><input type="text" name="address" >@<input type="text" name="address">
+        <th><label for="addre">주소</label></th>
+        <td><input type="text" name="address" id="addre" ><label for="addre"></label>@<input type="text" name="address"><label for="addre"></label>
           <select>
             <option>daum.net</option>
             <option>gmail.com</option>
@@ -44,21 +46,23 @@
           </select></td>
         </tr>
         <tr>
-          <td>전화번호</td>
-          <td><select>
+          <th><label for="num">전화번호</label></th>
+          <td><select id="num">
             <option>LGT</option>
             <option>SKT</option>
             <option>KT</option>
             <option>기타</option>
-          </select> <input type="text" name="number1" ><input name="number2" type="text"></td>
+          </select> <input type="text" name="number1" id="num" ><label for="num"></label><input name="number2" type="text"id="num"><label for="num"></label></td>
         </tr>
         <tr>
-          <td>취미</td>
-          <td><input type="checkbox" name="hobby">여행 <input type="checkbox" name="bobby">쇼핑 <input type="checkbox" name="hobby">게입 <input type="checkbox" name="hobby">기타</td>
+          <th><label for="ho">취미</label></th>
+          <td><input type="checkbox" name="hobby" id=ho><label for="ho">여행</label> <input type="checkbox" name="bobby" id="ho"><label for="ho">쇼핑</label> <input type="checkbox" name="hobby"id="ho">
+            <label for="ho">게임</label>
+            <input type="checkbox" name="hobby"id="ho"><label for="ho">기타</label></td>
         </tr>
         <tr>
-          <td>자기소개</td>
-          <td><textarea ></textarea></td>
+          <th><label for="ja">자기소개</label></th>
+          <td><textarea id="ja" ></textarea><label for="ja"></label></td>
         </tr>
         <tr>
         <td colspan="2">
