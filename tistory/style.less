@@ -1,18 +1,18 @@
 // out: styles.css, sourcemap: flase, compress: true
 
-@import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 @color-white:#fff;
 @color-black:#000;
 @color-font:#666;
-@color-sub:#FF5383;
-@color-main#FF5383;
-@color-master:#FF5383;
+@color-sub:#FF9891;
+@color-main#FF9891;
+@color-master:#FF9891;
 @color-line:@color-sub;
 
 // reset
 body, html h1, h2, h3, h4, h5, h6, ul, ol, dl, li, p{ margin: 0; padding: 0;}
-body{font-family: 'Pangolin', cursive;}
+body{font-family: 'Noto Sans', sans-serif;}
 ul, ol, li{list-style: none;}
 img{border: 0;vertical-align: top;}
 input{vertical-align: middle;}
@@ -23,7 +23,6 @@ a{text-decoration: none;
 // layout
 #header{
   padding:20px 50px;
-  outline:1px #f00 solid;
   text-align: center;
   background-color: @color-master;
 }
@@ -40,6 +39,8 @@ h1{
   span{
     font-size: 12px;
     display: block;
+    color:@color-white;
+    margin-bottom:5px;
   }
 }
 .blog_menu{
