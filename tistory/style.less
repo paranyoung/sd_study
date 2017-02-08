@@ -1,0 +1,55 @@
+// out: styles.css, sourcemap: flase, compress: true
+
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
+@color-white:#fff;
+@color-black:#000;
+@color-font:#666;
+@color-sub:#FF5383;
+@color-main#FF5383;
+@color-master:#FF5383;
+@color-line:@color-sub;
+
+// reset
+body, html h1, h2, h3, h4, h5, h6, ul, ol, dl, li, p{ margin: 0; padding: 0;}
+body{font-family: 'Pangolin', cursive;}
+ul, ol, li{list-style: none;}
+img{border: 0;vertical-align: top;}
+input{vertical-align: middle;}
+a{text-decoration: none;
+  color:@color-font;}
+
+
+// layout
+#header{
+  padding:20px 50px;
+  outline:1px #f00 solid;
+  text-align: center;
+  background-color: @color-master;
+}
+h1{
+  font-size: 30px;
+  font-weight: 300;
+  border-bottom: 2px @color-white solid;
+  padding-bottom: 5px;
+  display: inline-block;
+  text-transform:uppercase;
+  a{
+    color:@color-white;
+  }
+  span{
+    font-size: 12px;
+    display: block;
+  }
+}
+.blog_menu{
+  font-size: 0;
+  margin-top:5px;
+  li{
+    font-size: 14px;
+    margin:0 5px;
+    display: inline-block;
+    a{color:@color-white;
+    }
+  }
+}
