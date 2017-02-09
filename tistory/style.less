@@ -1,55 +1,184 @@
 // out: styles.css, sourcemap: flase, compress: true
 
-@import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
 
 @color-white:#fff;
 @color-black:#000;
 @color-font:#666;
-@color-sub:#FF5383;
-@color-main#FF5383;
-@color-master:#FF5383;
+@color-sub:#CC395A;
+@color-main:#FF9891;
+@color-master:#FF9891;
 @color-line:@color-sub;
 
 // reset
-body, html h1, h2, h3, h4, h5, h6, ul, ol, dl, li, p{ margin: 0; padding: 0;}
-body{font-family: 'Pangolin', cursive;}
-ul, ol, li{list-style: none;}
-img{border: 0;vertical-align: top;}
+body{font-family: 'Noto Sans','Nanum Gothic Coding', sans-serif, monospace;}
+
+body,html,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,p{margin:0; padding:0;}
+ul,ol,li{list-style:none;}
+img{border:0; vertical-align: top;}
 input{vertical-align: middle;}
-a{text-decoration: none;
-  color:@color-font;}
+a{
+  text-decoration: none;
+  color:@color-font;
+}
 
-
-// layout
+//layout
 #header{
   padding:20px 50px;
-  outline:1px #f00 solid;
   text-align: center;
-  background-color: @color-master;
-}
-h1{
-  font-size: 30px;
-  font-weight: 300;
-  border-bottom: 2px @color-white solid;
-  padding-bottom: 5px;
-  display: inline-block;
-  text-transform:uppercase;
-  a{
-    color:@color-white;
-  }
-  span{
-    font-size: 12px;
-    display: block;
-  }
-}
-.blog_menu{
-  font-size: 0;
-  margin-top:5px;
-  li{
-    font-size: 14px;
-    margin:0 5px;
-    display: inline-block;
-    a{color:@color-white;
+  background-color:@color-master;
+  h1{
+    font-size:30px;
+    font-weight: 300;
+    border-bottom:2px @color-white solid;
+    padding-bottom:5px;
+    display:inline-block;
+    text-transform:uppercase;
+    a{
+      color:@color-white;
+      span{
+        font-size:12px;
+        display:block;
+      }
     }
   }
+  .blogMenu{
+      font-size:0;
+      li{
+          font-size:14px;
+          margin:0 5px;
+          display: inline-block;
+          a{
+             color:@color-white;
+
+          }
+      }
+  }
+
 }
+#container{
+  width: 990px;
+  margin:20px auto 0;
+  border:1px @color-font solid;
+  border-radius: 3px;
+  .entry{
+    .titleWrap{
+      margin-bottom:30px;
+      h2 a{
+        font-weight: 300;
+        border-bottom:2px @color-main solid;
+      }
+    }
+    .tagTrail{
+      border:1px @color-main solid;
+      border-radius:3px;
+      margin:35px 0 0;
+      padding:10px 20px;
+      position:relative;
+      .tagText{
+        border-radius:3px 3px 0 0 ;
+        margin-left:20px;
+        position:absolute;
+        left:0;
+        top:-30px;
+        height:30px;
+        padding:0 15px;
+        background-color: @color-sub;
+        color:@color-white;
+      }
+      a{
+       font-size:12px;
+       color:@color-white;
+       background-color:@color-main;
+       padding:0 10px;
+       border-radius:3px;
+      }
+    }
+    .comment{
+      margin-top:30px;
+      .commentWrite{
+        p>textarea{
+          display: block;
+          height: 80px;
+          margin:10px auto;
+          width: 99%;
+          border: 1px @color-main solid;
+          border-radius: 3px;
+        }
+        p.submit {
+          text-align: right;
+          input[type="submit"]{
+          border: 0;
+          vertical-align: middle;
+          line-height: 30px;
+          height: 30px;
+          font-size:12px;
+          color:@color-white;
+          background-color:@color-sub;
+          border-radius:3px;
+          background-repeat: no-repeat;
+
+          }
+        }
+      }
+      .commentList{
+        border:1px @color-main solid;
+        border-radius: 3px;
+        ol li{
+          overflow: hidden;
+          border: 1px @color-font solid;
+           li{
+             margin-left: 68px;
+             overflow: hidden;
+            p{
+              margin:10px 10px;
+              overflow: hidden;
+            }
+          }
+          div span{
+            overflow: hidden;
+            margin: 10px 10px;
+            p{
+              margin-left: 68px;
+              border: 1px @color-font solid;
+              overflow: hidden;
+              }
+            }
+          }
+          .control{
+            a{
+            font-size:12px;
+            color:@color-white;
+            background-color:@color-main;
+            padding:0 10px;
+            border-radius:3px;
+            float: right;
+            margin-right: 10px;
+            }
+            a:first-child{
+              color:@color-white;
+              background-color:@color-sub;
+            }
+          }
+        }
+        .image{
+          display:block;
+          width:50px;
+          height:50px;
+          border-radius:30px;
+          border: 3px @color-master solid;
+          overflow:hidden;
+          float: left;
+          margin-right: 10px;
+          img{
+            width:100%;
+            outline:3px @color-master solid;
+            .control{
+              float: right;
+              }
+          }
+        }
+      }
+    }
+  }
