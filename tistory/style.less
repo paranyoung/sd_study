@@ -1,6 +1,6 @@
 // out: styles.css, sourcemap: flase, compress: true
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
 
 @color-white:#fff;
@@ -11,8 +11,10 @@
 @color-master:#FF9891;
 @color-line:@color-sub;
 
+@layoutwidth:750px;
+
 // reset
-body{font-family: 'Noto Sans','Nanum Gothic Coding', sans-serif, monospace;}
+body{font-family: 'Pangolin','Nanum Gothic Coding', sans-serif, cursive;}
 
 body,html,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,p{margin:0; padding:0;}
 ul,ol,li{list-style:none;}
@@ -44,32 +46,48 @@ a{
     }
   }
   .blogMenu{
-      font-size:0;
-      li{
-          font-size:14px;
-          margin:0 5px;
-          display: inline-block;
-          a{
-             color:@color-white;
+    font-size:0;
+    li{
+      font-size:14px;
+      margin:0 5px;
+      display: inline-block;
+      a{
+        color:@color-white;
 
-          }
       }
+    }
   }
 
 }
 #container{
   width: 990px;
   margin:20px auto 0;
-  border:1px @color-font solid;
   border-radius: 3px;
+  font-size: 12px;
+  color: @color-font;
+  #content{
+    width:@layoutwidth;
+    float:left;
+  }
+
   .entry{
     .titleWrap{
       margin-bottom:30px;
-      h2 a{
+      h2{
+        margin: 10px auto;
+      a{
         font-weight: 300;
         border-bottom:2px @color-main solid;
+        }
       }
     }
+
+    .article{
+      p{
+        margin:20px;
+      }
+    }
+
     .tagTrail{
       border:1px @color-main solid;
       border-radius:3px;
@@ -88,15 +106,56 @@ a{
         color:@color-white;
       }
       a{
-       font-size:12px;
-       color:@color-white;
-       background-color:@color-main;
-       padding:0 10px;
-       border-radius:3px;
+        font-size:12px;
+        color:@color-white;
+        background-color:@color-main;
+        padding:0 10px;
+        border-radius:3px;
       }
     }
     .comment{
       margin-top:30px;
+
+      .commentList{
+        border:1px @color-main solid;
+        border-radius: 1px;
+        >ol>li{
+          overflow: hidden;
+          margin: 10px 10px;
+          p{
+            border: 1px @color-main solid;
+            overflow: hidden;
+            margin: 10px 10px;
+          }
+
+          li{
+            margin-left:68px;
+            overflow: hidden;
+            p{
+              border: 1px @color-main solid;
+              margin:10px 10px;
+              overflow: hidden;
+            }
+          }
+
+          div{
+            overflow: hidden;
+          }
+        }
+
+
+
+
+        div span{
+          overflow: hidden;
+          margin: 10px 10px;
+          p{
+            margin-left: 68px;
+            border: 1px @color-font solid;
+            overflow: hidden;
+          }
+        }
+      }
       .commentWrite{
         p>textarea{
           display: block;
@@ -109,76 +168,92 @@ a{
         p.submit {
           text-align: right;
           input[type="submit"]{
-          border: 0;
-          vertical-align: middle;
-          line-height: 30px;
-          height: 30px;
-          font-size:12px;
-          color:@color-white;
-          background-color:@color-sub;
-          border-radius:3px;
-          background-repeat: no-repeat;
+            border: 0;
+            vertical-align: middle;
+            line-height: 30px;
+            height: 30px;
+            font-size:12px;
+            color:@color-white;
+            background-color:@color-sub;
+            border-radius:3px;
+            background-repeat: no-repeat;
+            margin-right: 15px;
 
           }
         }
       }
-      .commentList{
-        border:1px @color-main solid;
-        border-radius: 3px;
-        ol li{
-          overflow: hidden;
-          border: 1px @color-font solid;
-           li{
-             margin-left: 68px;
-             overflow: hidden;
-            p{
-              margin:10px 10px;
-              overflow: hidden;
-            }
-          }
-          div span{
-            overflow: hidden;
-            margin: 10px 10px;
-            p{
-              margin-left: 68px;
-              border: 1px @color-font solid;
-              overflow: hidden;
-              }
-            }
-          }
-          .control{
-            a{
-            font-size:12px;
-            color:@color-white;
-            background-color:@color-main;
-            padding:0 10px;
-            border-radius:3px;
-            float: right;
-            margin-right: 10px;
-            }
-            a:first-child{
-              color:@color-white;
-              background-color:@color-sub;
-            }
-          }
-        }
-        .image{
-          display:block;
-          width:50px;
-          height:50px;
-          border-radius:30px;
-          border: 3px @color-master solid;
-          overflow:hidden;
-          float: left;
+      .control{
+        a{
+          font-size:12px;
+          color:@color-white;
+          background-color:@color-main;
+          padding:0 10px;
+          border-radius:3px;
+          float: right;
           margin-right: 10px;
-          img{
-            width:100%;
-            outline:3px @color-master solid;
-            .control{
-              float: right;
-              }
-          }
+        }
+        a:first-child{
+          color:@color-white;
+          background-color:@color-sub;
+        }
+      }
+    }
+    .image{
+      display:block;
+      width:50px;
+      height:50px;
+      border-radius:30px;
+      border: 3px @color-master solid;
+      overflow:hidden;
+      float: left;
+      margin-right: 10px;
+      img{
+        width:100%;
+        outline:2px @color-master solid;
+        .control{
+          float: right;
         }
       }
     }
   }
+  .paging{
+    text-align:center;
+    padding:20px 0;
+    a{
+      color: @color-white;
+      padding:0 5px;
+      border-radius: 3px;
+      font-size:12px;
+      background-color: @color-main;
+    }
+  }
+}
+
+#sidebar{
+  margin-left: @layoutwidth;
+  border: 3px @color-main solid;
+  padding: 0 10px;
+  border-radius: 30px;
+  position: fixed;
+  width: 15%;
+  .blogImage{
+    text-align: center;
+      img{
+      margin-top:-60px;
+      width: 40%;
+      border-radius: 100px;
+      border: 5px @color-white solid;
+    }
+
+    .blogDesc{
+      margin: 10px 0;
+      color:@color-font;
+    }
+  }
+  .category{
+    margin: 10px 10px 20px 20px;
+    h3{
+      color: @color-sub;
+    }
+  }
+}
