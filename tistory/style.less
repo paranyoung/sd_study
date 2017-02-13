@@ -6,12 +6,12 @@
 @color-white:#fff;
 @color-black:#000;
 @color-font:#666;
-@color-sub:#CC395A;
+@color-sub:#CC4F58;
 @color-main:#FF9891;
 @color-master:#FF9891;
 @color-line:@color-sub;
 
-@layoutwidth:750px;
+@layoutwidth:700px;
 
 // reset
 body{font-family: 'Pangolin','Nanum Gothic Coding', sans-serif, cursive;}
@@ -52,8 +52,9 @@ a{
       margin:0 5px;
       display: inline-block;
       a{
+        display: inline-block;
         color:@color-white;
-
+        margin-top: 5px;
       }
     }
   }
@@ -69,20 +70,42 @@ a{
     width:@layoutwidth;
     float:left;
   }
-
+  .searchList{
+    h3{
+      span:first-child{
+        margin: 10px 10px;
+        font-size:17px;
+      }
+    }
+    ol{
+      border: 1px @color-main solid;
+      margin-top: 10px;
+      font-size: 13px;
+      border-radius: 3px;
+      padding: 10px;
+      li{
+        line-height: 150%;
+      }
+    }
+  }
   .entry{
     .titleWrap{
       margin-bottom:30px;
       h2{
         margin: 10px auto;
-      a{
-        font-weight: 300;
-        border-bottom:2px @color-main solid;
+        a{
+          font-weight: 300;
+          border-bottom:2px @color-sub solid;
         }
       }
     }
 
     .article{
+      .another_category{
+        border: 1px @color-main solid !important;
+        border-radius: 3px;
+        font-weight: 300;
+      }
       p{
         margin:20px;
       }
@@ -109,7 +132,7 @@ a{
         font-size:12px;
         color:@color-white;
         background-color:@color-main;
-        padding:0 10px;
+        padding:2px 10px;
         border-radius:3px;
       }
     }
@@ -123,7 +146,6 @@ a{
           overflow: hidden;
           margin: 10px 10px;
           p{
-            border: 1px @color-main solid;
             overflow: hidden;
             margin: 10px 10px;
           }
@@ -132,7 +154,6 @@ a{
             margin-left:68px;
             overflow: hidden;
             p{
-              border: 1px @color-main solid;
               margin:10px 10px;
               overflow: hidden;
             }
@@ -142,10 +163,6 @@ a{
             overflow: hidden;
           }
         }
-
-
-
-
         div span{
           overflow: hidden;
           margin: 10px 10px;
@@ -164,6 +181,7 @@ a{
           width: 99%;
           border: 1px @color-main solid;
           border-radius: 3px;
+          padding: 10px 10px;
         }
         p.submit {
           text-align: right;
@@ -187,7 +205,7 @@ a{
           font-size:12px;
           color:@color-white;
           background-color:@color-main;
-          padding:0 10px;
+          padding:2px 10px;
           border-radius:3px;
           float: right;
           margin-right: 10px;
@@ -227,33 +245,176 @@ a{
       background-color: @color-main;
     }
   }
+  .guestbook{
+    h3{
+      font-weight: 150%;
+      span{
+        border-bottom: 2px @color-sub solid;
+      }
+      color: @color-font;
+      margin: 20px 10px;
+      font-size: 17px;
+    }
+    .guestWrite{
+      margin: 10px 10px;
+      div input{
+        width: 150px;
+        height: 20px;
+        background-color: @color-main;
+        border: 1px @color-main solid;
+        border-radius: 3px;
+        margin: 5px 0;
+        padding-right: 10px;
+        border: 0 none;
+        color: @color-white;
+        padding:0 10px;
+      }
+      textarea{
+        display: block;
+        width: 98%;
+        margin: 10px auto;
+        border: 1px @color-main solid;
+        border-radius: 3px;
+        padding:10px 10px;
+        font-size: 13px;
+
+      }
+      input[type="submit"]{
+        background-color: @color-main;
+        color: @color-white;
+        background-repeat: no-repeat;
+        border: 0 none;
+        width: 90px;
+        height: 25px;
+        border-radius: 3px;
+        line-height: 23px;
+      }
+    }
+    .guestList{
+      margin: 10px 10px;
+      li{
+        border: 1px @color-main solid;
+        border-radius: 3px;
+        margin: 20px 0;
+        padding: 10px;
+        width: 98%;
+      }
+      span.name{
+        text-decoration: none;
+        color: @color-font;
+      }
+      span.control{
+        float: right;
+        a{
+          background-color: @color-main;
+          border: 1px @color-main solid;
+          border-radius: 3px;
+          color: @color-white;
+          font-size: 11px;
+          padding: 1px 5px;
+          margin-right: 5px;
+        }
+      }
+    p{
+        margin-top: 10px;
+      }
+    .date{
+      a{
+        color: @color-sub;
+        font-size: 15px;
+        margin: 0 10px;
+      }
+    }
+    }
+  }
 }
 
 #sidebar{
-  margin-left: @layoutwidth;
+  margin-left: 710px;
   border: 3px @color-main solid;
-  padding: 0 10px;
   border-radius: 30px;
-  position: fixed;
-  width: 15%;
-  .blogImage{
-    text-align: center;
-      img{
-      margin-top:-60px;
-      width: 40%;
-      border-radius: 100px;
-      border: 5px @color-white solid;
-    }
+  font-weight: 400px;
 
-    .blogDesc{
-      margin: 10px 0;
-      color:@color-font;
+  h3{
+    margin-bottom: 10px;
+    span{
+      border-bottom: 2px @color-sub solid;
     }
   }
-  .category{
+  .blogImage{
+    text-align: center;
+    img{
+      margin-top:-60px;
+      width: 50%;
+      border-radius: 100px;
+      border: 3px @color-main solid;
+    }
+  }
+  .blogDesc{
+    margin: 10px 0;
+    color:@color-font;
+  }
+
+  div{
     margin: 10px 10px 20px 20px;
     h3{
-      color: @color-sub;
+      color: @color-font;
+    }
+  }
+  .calender{
+
+    tr{
+      th:first-child{
+        color: @color-sub;
+      }
+      td:first-child{
+        color: @color-sub;
+      }
+      th:last-child{
+        color: #1495CC;
+      }
+      td:last-child{
+        color: #1495CC;
+      }
+    }
+
+    tbody{
+      text-align: center;
+    }
+  }
+  .counter{
+    text-align: center;
+    >span{
+      border-bottom: 2px @color-sub solid;
+      font-size: 13px;
+    }
+    span^{
+      margin-right: 6px;
+    }
+  }
+  .search{
+    position: relative;
+    bottom:760px;
+    left:25px;
+    width: 230px;
+    height: 30px;
+    border: 1px @color-sub solid;
+    input.submit{
+      background-repeat: no-repeat;
+      background-color: @color-sub;
+      border: 0 none;
+      color: @color-white;
+      height: 30px;
+      width: 48px;
+    }
+    input[type=text]{
+      background-color: @color-main;
+      background-repeat: no-repeat;
+      border: 0 none;
+      height: 28px;
+      padding: 1px 10px;
+      width: 159px;
+      color: @color-white;
     }
   }
 }

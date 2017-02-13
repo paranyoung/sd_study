@@ -23,12 +23,99 @@
 
       <div id="content">
         <!--<div class="searchList">11. 검색 결과 리스트</div>-->
-        <!--<div class="searchRplist">12. 검색 결과 댓글 리스트</div>-->
+        <s_list>
+          <div class="searchList">
+            <!-- 검색 결과 댓글 리스트 -->
+            <h3>
+              <span>'[##_list_conform_##]'</span><span>에 해당되는 글 [##_list_count_##]건</span>
+            </h3>
+            <ol>
+              <s_list_rep>
+                <li>
+                  <span class="date">[##_list_rep_regdate_##]</span>
+                  <a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
+                  <span class="cnt">[##_list_rep_rp_cnt_##]</span>
+                </li>
+              </s_list_rep>
+            </ol>
+          </div>
+        </s_list>
         <!--<div class="locallog">13. 위치 로그</div>-->
         <!--<div class="taglog">14. 태그 클라우드</div>-->
-        <!--<div class="guestbook">15. 방명록-->
-        <!--  <div class="guestWrite">15-1. 방명록 글쓰기</div>-->
-        <!--  <div class="guestList">15-2. 방명록 리스트</div>-->
+
+        <s_guest>
+          <!-- 방명록 -->
+          <div class="guestbook">
+            <h3>
+              <span>방명록</span>
+              </h3>
+            <s_guest_input_form>
+              <div class="guestWrite">
+                <!-- 방명록 글쓰기 -->
+                <s_guest_member>
+                  <s_guest_form>
+                    <div class="">
+                    <p>
+                      <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" /> <label for="name"> : 이름 </label>
+                    </p>
+                    <p>
+                      <input type="password" maxlength="8" name="[##_guest_input_password_##]" value="[##_guest_password_##]" /> <label for="password"> : 패스워드 </label>
+                    </p>
+                    <p>
+                      <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" /> <label for="homepage"> : 홈페이지 </label>
+                    </p>
+                  </div>
+                  </s_guest_form>
+                </s_guest_member>
+                <p>
+                  <textarea name="[##_guest_textarea_body_##]" cols="50" rows="6"></textarea>
+                </p>
+                <p>
+                  <input type="submit" value="안부 남기기" onclick="[##_guest_onclick_submit_##]"/>
+                </p>
+              </div>
+            </s_guest_input_form>
+            <s_guest_container>
+              <!-- 방명록 리스트 -->
+              <div class="guestList">
+                <ol>
+                  <s_guest_rep>
+                    <li id='[##_guest_rep_id_##]'>
+                      <div class="[##_guest_rep_class_##]">
+                        <span class="name">[##_guest_rep_name_##]</span>
+                        <span class="date"> [##_guest_rep_date_##]</span>
+                        <span class="control">
+                          <a href="#" onclick="[##_guest_rep_onclick_delete_##]">MODIFY/DELETE</a>
+                          <a href="#" onclick="[##_guest_rep_onclick_reply_##]">REPLY</a>
+                        </span>
+                        <p>[##_guest_rep_desc_##]</p>
+                      </div>
+                      <s_guest_reply_container>
+                        <ul>
+                          <s_guest_reply_rep>
+                            <li id='[##_guest_rep_id_##]'>
+                              <div class="[##_guest_rep_class_##]">
+                                <span class="name">[##_guest_rep_name_##]</span>
+                                <span class="date"> [##_guest_rep_date_##]</span>
+                                <span class="control">
+                                  <a href="#" onclick="[##_guest_rep_onclick_delete_##]">
+                                    MODIFY/DELETE </a>
+                                  </span>
+                                  <p>[##_guest_rep_desc_##]</p>
+                                </div>
+                              </li>
+                            </s_guest_reply_rep>
+                          </ul>
+                        </s_guest_reply_container>
+                      </li>
+                    </s_guest_rep>
+                  </ol>
+                </div>
+              </s_guest_container>
+            </div>
+          </s_guest>
+
+
         <!--</div>-->
         <!--<div class="entryNotice">16. 공지사항 글</div>-->
         <!--<div class="entryProtected">17. 보호 글</div>-->
@@ -187,15 +274,80 @@
           <div class="blogImage">
             <div class="blogImage"><img src="[##_image_##]" alt="" /></div>
             <div class="blogDesc">[##_desc_##] <br />
-                <span class="userID">[##_blogger_##]</span>
+              <span class="userID">[##_blogger_##]</span>
             </div>
           </div>
         </s_sidebar_element>
         <s_sidebar_element>
           <!-- 카테고리 -->
-            <div class="category">
-            <h3>카테고리</h3>
+          <div class="category">
+            <h3>
+              <span>카테고리</span>
+            </h3>
             [##_category_list_##]
+          </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+          <!-- 최근에 올라온 글 -->
+          <div class="recentPost">
+            <h3>
+              <span>최근에 올라온 글</span>
+            </h3>
+            <ul>
+              <s_rctps_rep>
+                <li>
+                  <a href="[##_rctps_rep_link_##]"> [##_rctps_rep_title_##].</a>
+                  <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
+                </li>
+              </s_rctps_rep>
+            </ul>
+          </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+          <!-- 최근에 달린 댓글 -->
+          <div class="recentComment">
+            <h3>
+              <span>최근에 달린 댓글</span>
+            </h3>
+            <ul id="recentComments">
+              <s_rctrp_rep>
+                <li>
+                  <a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##].</a>
+                  <span class="info_wrap">
+                    <span class="name">[##_rctrp_rep_name_##]</span>
+                    <span class="date">[##_rctrp_rep_time_##]</span>
+                  </span>
+                </li>
+              </s_rctrp_rep>
+            </ul>
+          </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+          <!-- 달력 -->
+          <div class="calender">
+            <h3>
+              <span>달력</span>
+            </h3>
+            [##_calendar_##]
+          </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+          <!-- 방문자수 -->
+          <div class="counter">
+            <span>
+              <span class="total">Total : [##_count_total_##] </span>
+              <span class="today">Today : [##_count_today_##]</span>
+              <span class="yesterday">Yesterday : [##_count_yesterday_##]</span>
+            </span>
+          </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+          <!-- 검색 -->
+          <div class="search">
+            <s_search>
+              <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="검색하기" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"/>
+              <input value="검색" type="button" onclick="[##_search_onclick_submit_##]" class="submit"/>
+            </s_search>
           </div>
         </s_sidebar_element>
       </div> <!-- sidebar close -->
