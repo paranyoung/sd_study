@@ -24,17 +24,20 @@ a{
   text-decoration: none;
   color:@color-font;
 }
+a:hover{
+  opacity: 0.5;
+}
 
 //layout
 #header{
-  padding:20px 50px;
+  padding:40px 50px;
   text-align: center;
   background-color:@color-master;
   h1{
     font-size:30px;
     font-weight: 300;
     border-bottom:2px @color-white solid;
-    padding-bottom:5px;
+    padding-bottom:3px;
     display:inline-block;
     text-transform:uppercase;
     a{
@@ -47,6 +50,7 @@ a{
   }
   .blogMenu{
     font-size:0;
+    margin-bottom: 15px;
     li{
       font-size:14px;
       margin:0 5px;
@@ -85,6 +89,9 @@ a{
       padding: 10px;
       li{
         line-height: 150%;
+        span.date{
+          color: @color-sub;
+        }
       }
     }
   }
@@ -96,11 +103,53 @@ a{
         a{
           font-weight: 300;
           border-bottom:2px @color-sub solid;
+          color: @color-sub;
         }
       }
     }
-
+    .top_bottom{
+      display: block;
+      position: fixed;
+      right: 30px;
+      bottom: 50px;
+      z-index: 900;
+      a.top{
+        cursor: pointer;
+        display: block;
+        padding: 15px 15px;
+        color: @color-white;
+        background-color: @color-main;
+        background-position: 0 -45px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 100%;
+        border-radius: 4px;
+      }
+      a.bottom{
+        cursor: pointer;
+        display: block;
+        padding: 15px 15px;
+        color: @color-white;
+        background-color: @color-sub;
+        margin-top: 1px;
+        background-position: 0 -45px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 100%;
+        border-radius: 4px;
+      }
+      a:hover{
+        opacity: 0.5;
+      }
+    }
     .article{
+      div>ul{
+        position: absolute;
+        top:45px;
+        li>a{
+          background-color: @color-sub;
+        }
+      }
       .another_category{
         border: 1px @color-main solid !important;
         border-radius: 3px;
@@ -145,6 +194,9 @@ a{
         >ol>li{
           overflow: hidden;
           margin: 10px 10px;
+          span.date{
+            color: @color-sub;
+          }
           p{
             overflow: hidden;
             margin: 10px 10px;
@@ -178,7 +230,7 @@ a{
           display: block;
           height: 80px;
           margin:10px auto;
-          width: 99%;
+          width: 678px;
           border: 1px @color-main solid;
           border-radius: 3px;
           padding: 10px 10px;
@@ -237,12 +289,20 @@ a{
   .paging{
     text-align:center;
     padding:20px 0;
-    a{
+    a.num{
       color: @color-white;
       padding:0 5px;
-      border-radius: 3px;
-      font-size:12px;
+      border-radius: 5px;
+      font-size:13px;
       background-color: @color-main;
+      border: 1px @color-main solid;
+    }
+    a{
+      color: @color-font;
+      padding:0 5px;
+      border-radius: 3px;
+      border: 1px @color-font solid;
+      font-size:13px;
     }
   }
   .guestbook{
@@ -280,7 +340,7 @@ a{
 
       }
       input[type="submit"]{
-        background-color: @color-main;
+        background-color: @color-sub;
         color: @color-white;
         background-repeat: no-repeat;
         border: 0 none;
@@ -292,20 +352,29 @@ a{
     }
     .guestList{
       margin: 10px 10px;
-      li{
+      ol>li{
         border: 1px @color-main solid;
         border-radius: 3px;
         margin: 20px 0;
         padding: 10px;
         width: 98%;
+        li{
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px @color-main solid ;
+        }
       }
       span.name{
         text-decoration: none;
-        color: @color-font;
+        a{color: @color-font;
+        }
+      }
+      span.date{
+        color: @color-sub;
       }
       span.control{
         float: right;
-        a{
+        a:first-child{
           background-color: @color-main;
           border: 1px @color-main solid;
           border-radius: 3px;
@@ -314,47 +383,121 @@ a{
           padding: 1px 5px;
           margin-right: 5px;
         }
+        a{
+          background-color: @color-sub;
+          border: 1px @color-main solid;
+          border-radius: 3px;
+          color: @color-white;
+          font-size: 11px;
+          padding: 1px 5px;
+          margin-right: 5px;
+        }
       }
-    p{
+      p{
         margin-top: 10px;
       }
-    .date{
-      a{
-        color: @color-sub;
-        font-size: 15px;
-        margin: 0 10px;
+      .date{
+        a{
+          color: @color-sub;
+          font-size: 12px;
+          margin: 0 10px;
+          font-weight: bold;
+        }
       }
-    }
     }
   }
 }
 
 #sidebar{
   margin-left: 710px;
-  border: 3px @color-main solid;
-  border-radius: 30px;
   font-weight: 400px;
-
-  h3{
-    margin-bottom: 10px;
-    span{
-      border-bottom: 2px @color-sub solid;
+  div{
+    h3{
+      margin-bottom: 10px;
+      line-height: 150%;
+      span{
+        border-bottom: 2px @color-sub solid;
+        color: @color-sub;
+      }
+    }
+    li>ul>li{
+      margin-left: 5px;
+      line-height: 150%;
+    }
+  }
+  .category{
+    ul>li{
+      font-weight: bold;
+      ul>li{
+        font-weight: initial;
+      }
     }
   }
   .blogImage{
     text-align: center;
     img{
-      margin-top:-60px;
+      margin-top:-70px;
+      margin-right: 15px;
       width: 50%;
       border-radius: 100px;
       border: 3px @color-main solid;
+    }
+  }
+  @keyframes cat{
+    0%{transform:translate(0);}
+    20%{transform:translate(50px,100px); transform:rotate(180deg);}
+    40%{transform:translate(-360px, 0);width: 100px;height: 100px;border-radius: 10%;}
+    60%{transform:translate(50px, 100px); transform: rotate(-180deg);}
+    100%{transform:translate:0;}
+  }
+  .blogImage{
+    img:hover{
+    animation: cat 8s;
     }
   }
   .blogDesc{
     margin: 10px 0;
     color:@color-font;
   }
-
+  .search{
+    width: 200px;
+    height: 30px;
+    input.submit{
+      background-repeat: no-repeat;
+      background-color: @color-sub;
+      border: 0 none;
+      color: @color-white;
+      height: 30px;
+      width: 46px;
+      margin:0 -3px;
+      visibility: hidden;
+    }
+    input[type=text]{
+      background-repeat: no-repeat;
+      border: 0 none;
+      height: 28px;
+      padding: 1px 10px;
+      width: 150px;
+      color: @color-sub;
+      border-bottom: 1.5px @color-main dashed;
+    }
+    ::-webkit-input-placeholder { /* Chrome */
+      color: @color-font;
+      opacity: 0.5;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: @color-font;
+      opacity: 0.5;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: @color-font;
+      opacity: 0.5;
+    }
+    :-moz-placeholder { /* Firefox 4 - 18 */
+      color: @color-font;
+      opacity: 0.5;
+    }
+  }
   div{
     margin: 10px 10px 20px 20px;
     h3{
@@ -384,37 +527,34 @@ a{
   }
   .counter{
     text-align: center;
-    >span{
+    span{
       border-bottom: 2px @color-sub solid;
       font-size: 13px;
-    }
-    span^{
-      margin-right: 6px;
+      span.total{
+        color: @color-main;
+      }
+      span.today{
+        color: @color-sub;
+      }
+      span.yesterday{
+        color: @color-font;
+      }
     }
   }
-  .search{
-    position: relative;
-    bottom:760px;
-    left:25px;
-    width: 230px;
+}
+#footer{
+  clear: both;
+  font-size: 11px;
+  div.copyright{
     height: 30px;
-    border: 1px @color-sub solid;
-    input.submit{
-      background-repeat: no-repeat;
-      background-color: @color-sub;
-      border: 0 none;
+    background-color: @color-main;
+    color:@color-white;
+    text-align: center;
+    line-height: 30px;
+    a{
+      line-height: 30px;
       color: @color-white;
-      height: 30px;
-      width: 48px;
-    }
-    input[type=text]{
-      background-color: @color-main;
-      background-repeat: no-repeat;
-      border: 0 none;
-      height: 28px;
-      padding: 1px 10px;
-      width: 159px;
-      color: @color-white;
+      text-align: center;
     }
   }
 }
