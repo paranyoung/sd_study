@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>가변그리드</title>
+    <style>
+      .wrap {
+        max-width: 1100px;
+        border: 1px #f00 solid;
+        margin: 0 auto;
+      }
+      .left{
+        height: 500px;
+        outline: 1px #f00 solid;
+        width: 23.63636363636364%;
+        float: left;
+      }
+      .content{
+        height: 500px;
+        outline: 1px #f00 solid;
+        margin-left: 23.63636363636364%;
+      }
+      .left-wrap{
+      height: 400px;
+      border: 1px #f00 solid;
+      margin-right: 10px;
+      }
+      .grid{
+        outline: 1px #f00 solid;
+      }
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li{
+        width: 33.3333333%;
+        outline: 1px #f00 solid;
+        float: left;
+        overflow: hidden;
+        transition: 1s;
+        position: relative;
+      }
+      li img{
+        width: 100%;
+        vertical-align: top;
+        transition: 1s cubic-bezier(0.99, 0.52, 0, 1.14);
+        }
+      li:hover img{
+        transform: scale(1.5,1.5) rotate(15deg);
+      }
+      li .text{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 40px;
+        height: 4px;
+        color: #fff;
+        font-size: 20px;
+        top:50%;
+        line-height:20px;
+        margin-top: -20px;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+      }
+      li .text .wa{
+        display: inline-block;
+
+        padding: 10px 5px;
+        position: relative;
+      }
+      .text:before{
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        left: 50%;
+        display: block;
+        content: "";
+        text-align: center;
+        margin: 0 auto;
+        transform-origin: center;
+        transition: 1s;
+      }
+
+      li:hover .text:before{
+        width: 0;
+      }
+      li .text .wa{
+        width: 140px;
+        border: 1px #f00 solid;
+      }
+      li .text .wa .line1{
+        position: absolute;
+        height:4px;
+        background-color:#FFF;
+        width:0;
+        top:0;
+        left:0;
+        transition: 0.5s;
+      }
+      li:hover .wa .line1{
+        width: 100%;}
+
+      li .text .wa .line2{
+        position: absolute;
+        height:0%;
+        background-color:#FFF;
+        width:4px;
+        top:0;
+        right:0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+      }
+
+      li:hover .wa .line2{
+        height: 100%;
+      }
+      li .text .wa .line3{
+        position: absolute;
+        height:4px;
+        background-color:#FFF;
+        width:0;
+        bottom:0;
+        right: 0;
+        transition: 0.5s;
+        transition-delay: 1s;
+      }
+      li:hover .wa .line3{
+        width: 100%;
+      }
+      li .text .wa .line4{
+        position: absolute;
+        height:0;
+        background-color:#FFF;
+        width:4px;
+        bottom:0;
+        left:0;
+        transition: 0.5s;
+        transition-delay: 1.5s;
+      }
+      li:hover .wa .line4{
+        height: 100%;
+      }
+
+
+      li div{
+        outline: 1px #f00 solid;
+        margin: 5px;
+      }
+      li:after{
+        content:"";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,131,132,0.5);
+        opacity:0;
+        transition: 1s;
+      }
+      li:hover:after{
+        opacity: 1;
+      }
+      @media screen and (max-width:480px) {
+             .grid li{
+                 float:none;
+                 width:auto
+               }
+           }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="left">
+          <div class="left-wrap"></div>
+      </div>
+      <div class="content">
+        <div class="grid">
+          <ul>
+            <li>
+              <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-01.jpg" alt="">
+              <span class="text">
+                <span class="wa">
+                  <span class="word">VISION</span>
+                  <span class="line1"></span>
+                  <span class="line2"></span>
+                  <span class="line3"></span>
+                  <span class="line4"></span>
+                </span>
+              </span>
+            </li>
+            <li>
+              <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-02.jpg" alt="">
+              <span class="text">
+                <span class="wa">
+                  <span class="word">PORTFOLIO</span>
+
+                  <span class="line1"></span>
+                  <span class="line2"></span>
+                  <span class="line3"></span>
+                  <span class="line4"></span>
+                </span>
+              </span>
+            </li>
+            <li>
+              <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-03.jpg" alt="">
+              <span class="text">
+                <span class="wa">
+                  RECRUIT
+
+                  <span class="line1"></span>
+                  <span class="line2"></span>
+                  <span class="line3"></span>
+                  <span class="line4"></span>
+                </span>
+              </span>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

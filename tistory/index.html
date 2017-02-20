@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="[##_desc_##]">
+  <meta name="google-site-verification" content="5AcSe1-IZdp4lp_YBIhzpepQLHakuVPxWdP9C-xFRS4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./style.css">
@@ -12,12 +15,14 @@
   <s_t3>
     <div id="header">
       <!-- 01. 블로그 제목 -->
-      <h1><a href="[##_blog_link_##]">[##_title_##]<span>고양이 이야기</span></a></h1>
-      <!-- 02. 블로그 메뉴 -->
+      <h1><a href="[##_blog_link_##]">[##_title_##]<span><b>나의 일상 이야기</b></span></a></h1>
+    </div> <!-- header close -->
+    <div id="navi">
+      <!-- 블로그 메뉴 -->
       <div class="blogMenu">
         [##_blog_menu_##]
       </div>
-    </div> <!-- header close -->
+    </div> <!-- navi close -->
 
     <div id="container">
 
@@ -140,8 +145,8 @@
                 </s_ad_div>
               </div>
               <div class="top_bottom">
-                <a class="top" href="#"><b>위</b></a>
-                <a class="bottom" href="#footer"><b>아래</b></a>
+                <a class="top" href="#"><b>UP</b></a>
+                <a class="bottom" href="#footer"><b>DOWN</b></a>
               </div>
               <div class="article">
                 <!-- 글-->
@@ -218,22 +223,24 @@
                     <div class="commentWrite">
                       <s_rp_member>
                         <s_rp_guest>
+                          <div class="userInfo">
                           <p>
-                            <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
-                            <label for="name"> : 이름 </label>
+                            <input type="text" placeholder="Name" name="[##_rp_input_name_##]" value="[##_guest_name_##]" />
+                            <label for="name"></label>
                           </p>
                           <p>
-                            <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" />블로그 관리자일 경우 password field에 미리 비밀번호를 넣어놓기 위해 만들어 놓았던 치환자였으나, 지금은 사용되지 않음.. (현재는 블로그 관리자일 경우 password field가 나타나지 않음.)
-                            <label for="password"> : 패스워드 </label>
+                            <input type="password" placeholder="Password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]" />
+                            <label for="password"></label>
                           </p>
                           <p>
-                            <input type="text" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/>
-                            <label for="homepage"> : 홈페이지 </label>
+                            <input type="text" placeholder="http//" class="homepage" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]"/>
+                            <label for="homepage"></label>
                           </p>
+                          </div>
                         </s_rp_guest>
                         <p class="secretWrap">
                           <input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox" />
-                          <label for="secret"> 비밀글 </label>
+                          <label for="secret"> <b>비밀글</b> </label>
                         </p>
                       </s_rp_member>
                       <p>
@@ -246,11 +253,7 @@
                   </s_rp_input_form>
                 </div>
               </s_rp>
-
-
-
-
-            </div><!-- entry close -->
+    </div><!-- entry close -->
           </s_article_rep>
           <!-- 페이지 -->
           <div class="entry">
@@ -267,10 +270,6 @@
             </s_paging>
           </div>
         </div> <!-- content close -->
-
-
-
-
         <div id="sidebar">
           <s_sidebar_element>
             <!-- 블로그 정보 -->
@@ -371,6 +370,7 @@
         </div> <!-- sidebar close -->
       </div> <!-- container close -->
       <div id="footer">
+
         <div class="copyright">
           <a href="[##_blog_link_##]"> [##_blogger_##]</a>’s Blog is powered by <a href="http://www.tistory.com/" onclick="window.open(this.href); return false">[##_tattertools_name_##] [##_tattertools_version_##]</a> /
           Designed by <a href="http://plyfly.net" onclick="window.open(this.href); return false">plyfly.net</a>

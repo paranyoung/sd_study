@@ -1,591 +1,579 @@
 // out: styles.css, sourcemap: flase, compress: true
-
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
 @import url('http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
-=======
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
->>>>>>> origin/master
 
 @color-white:#fff;
 @color-black:#000;
 @color-font:#666;
-<<<<<<< HEAD
 @color-sub:#CC4F58;
 @color-main:#FF9891;
-=======
-@color-sub:#FF9891;
-@color-main#FF9891;
->>>>>>> origin/master
 @color-master:#FF9891;
 @color-line:@color-sub;
-
-@layoutwidth:700px;
+@layoutwidth:800px;
 
 // reset
-<<<<<<< HEAD
-body{font-family: 'Pangolin','Nanum Gothic Coding', sans-serif, cursive;}
-=======
+
 body, html h1, h2, h3, h4, h5, h6, ul, ol, dl, li, p{ margin: 0; padding: 0;}
-body{font-family: 'Noto Sans', sans-serif;}
+body{font-family: 'Pangolin','Nanum Gothic Coding', sans-serif, cursive;}
 ul, ol, li{list-style: none;}
 img{border: 0;vertical-align: top;}
 input{vertical-align: middle;}
 a{text-decoration: none;
   color:@color-font;}
->>>>>>> origin/master
+a:hover{opacity: 0.5;}
 
-body,html,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,p{margin:0; padding:0;}
-ul,ol,li{list-style:none;}
-img{border:0; vertical-align: top;}
-input{vertical-align: middle;}
-a{
-  text-decoration: none;
-  color:@color-font;
-}
-a:hover{
-  opacity: 0.5;
-}
-
-//layout
-#header{
-<<<<<<< HEAD
-  padding:40px 50px;
-=======
-  padding:20px 50px;
->>>>>>> origin/master
-  text-align: center;
-  background-color:@color-master;
-  h1{
-    font-size:30px;
-    font-weight: 300;
-    border-bottom:2px @color-white solid;
-    padding-bottom:3px;
-    display:inline-block;
-    text-transform:uppercase;
-    a{
-      color:@color-white;
-      span{
-        font-size:12px;
-        display:block;
-      }
-    }
-  }
-  .blogMenu{
-    font-size:0;
-    margin-bottom: 15px;
-    li{
-      font-size:14px;
-      margin:0 5px;
-      display: inline-block;
+  //layout
+  #header{
+    padding:40px 50px;
+    text-align: center;
+    background-color:@color-white;
+    h1{
+      font-size:30px;
+      font-weight: 300;
+      opacity: 0.5;
+      display:inline-block;
+      text-transform:uppercase;
       a{
-        display: inline-block;
-        color:@color-white;
-        margin-top: 5px;
+        color:@color-font;
+        span{
+          font-size:12px;
+          display:block;
+        }
       }
     }
   }
+  #navi{
+    ul{
+      height: 50px;
 
-}
-#container{
-  width: 990px;
-  margin:20px auto 0;
-  border-radius: 3px;
-  font-size: 12px;
-  color: @color-font;
-  #content{
-    width:@layoutwidth;
-    float:left;
-  }
-  .searchList{
-    h3{
-      span:first-child{
-        margin: 10px 10px;
-        font-size:17px;
-      }
     }
-    ol{
-      border: 1px @color-main solid;
-      margin-top: 10px;
-      font-size: 13px;
-      border-radius: 3px;
-      padding: 10px;
+    .blogMenu{
+      font-size:0;
+      margin-bottom: 15px;
+      background-color: @color-main;
+      text-align: center;
+
       li{
-        line-height: 150%;
-        span.date{
-          color: @color-sub;
+        display: inline-block;
+        font-size:15px;
+        line-height: 50px;
+        margin-right: 30px;
+        font-weight: bold;
+
+        a{
+          display: inline-block;
+          color:@color-white;
         }
       }
     }
   }
-  .entry{
-    .titleWrap{
-      margin-bottom:30px;
-      h2{
-        margin: 10px auto;
-        a{
-          font-weight: 300;
-          border-bottom:2px @color-sub solid;
-          color: @color-sub;
-        }
-      }
+  #container{
+    width: 1100px;
+    margin:20px auto 0;
+    border-radius: 3px;
+    font-size: 12px;
+    color: @color-font;
+    #content{
+      width:@layoutwidth;
+      float:right;
     }
-    .top_bottom{
-      display: block;
-      position: fixed;
-      right: 30px;
-      bottom: 50px;
-      z-index: 900;
-      a.top{
-        cursor: pointer;
-        display: block;
-        padding: 15px 15px;
-        color: @color-white;
-        background-color: @color-main;
-        background-position: 0 -45px;
-        text-decoration: none;
-        text-align: center;
-        line-height: 100%;
-        border-radius: 4px;
-      }
-      a.bottom{
-        cursor: pointer;
-        display: block;
-        padding: 15px 15px;
-        color: @color-white;
-        background-color: @color-sub;
-        margin-top: 1px;
-        background-position: 0 -45px;
-        text-decoration: none;
-        text-align: center;
-        line-height: 100%;
-        border-radius: 4px;
-      }
-      a:hover{
-        opacity: 0.5;
-      }
-    }
-    .article{
-      div>ul{
-        position: absolute;
-        top:45px;
-        li>a{
-          background-color: @color-sub;
-        }
-      }
-      .another_category{
-        border: 1px @color-main solid !important;
-        border-radius: 3px;
-        font-weight: 300;
-      }
-      p{
-        margin:20px;
-      }
-    }
-
-    .tagTrail{
-      border:1px @color-main solid;
-      border-radius:3px;
-      margin:35px 0 0;
-      padding:10px 20px;
-      position:relative;
-      .tagText{
-        border-radius:3px 3px 0 0 ;
-        margin-left:20px;
-        position:absolute;
-        left:0;
-        top:-30px;
-        height:30px;
-        padding:0 15px;
-        background-color: @color-sub;
-        color:@color-white;
-      }
-      a{
-        font-size:12px;
-        color:@color-white;
-        background-color:@color-main;
-        padding:2px 10px;
-        border-radius:3px;
-      }
-    }
-    .comment{
-      margin-top:30px;
-
-      .commentList{
-        border:1px @color-main solid;
-        border-radius: 1px;
-        >ol>li{
-          overflow: hidden;
+    .searchList{
+      h3{
+        span:first-child{
           margin: 10px 10px;
+          font-size:17px;
+        }
+      }
+      ol{
+        border: 1px @color-main solid;
+        margin-top: 10px;
+        font-size: 13px;
+        border-radius: 3px;
+        padding: 10px;
+        li{
+          line-height: 150%;
           span.date{
             color: @color-sub;
           }
-          p{
-            overflow: hidden;
-            margin: 10px 10px;
-          }
-
-          li{
-            margin-left:68px;
-            overflow: hidden;
-            p{
-              margin:10px 10px;
-              overflow: hidden;
-            }
-          }
-
-          div{
-            overflow: hidden;
-          }
         }
-        div span{
-          overflow: hidden;
-          margin: 10px 10px;
-          p{
-            margin-left: 68px;
-            border: 1px @color-font solid;
-            overflow: hidden;
+      }
+    }
+    .entry{
+      .titleWrap{
+        margin-bottom:30px;
+        h2{
+          margin: 10px auto;
+          a{
+            font-weight: 300;
+            border-bottom:2px @color-sub solid;
+            color: @color-sub;
           }
         }
       }
-      .commentWrite{
-        p>textarea{
+      .top_bottom{
+        display: block;
+        position: fixed;
+        right: 30px;
+        bottom: 50px;
+        z-index: 900;
+        a.top{
+          cursor: pointer;
           display: block;
-          height: 80px;
-          margin:10px auto;
-          width: 678px;
-          border: 1px @color-main solid;
-          border-radius: 3px;
-          padding: 10px 10px;
+          padding: 15px 15px;
+          color: @color-white;
+          background-color: @color-main;
+          background-position: 0 -45px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 100%;
+          border-radius: 4px;
         }
-        p.submit {
-          text-align: right;
-          input[type="submit"]{
-            border: 0;
-            vertical-align: middle;
-            line-height: 30px;
-            height: 30px;
-            font-size:12px;
-            color:@color-white;
-            background-color:@color-sub;
-            border-radius:3px;
-            background-repeat: no-repeat;
-            margin-right: 15px;
-
-          }
+        a.bottom{
+          cursor: pointer;
+          display: block;
+          padding: 15px 15px;
+          color: @color-white;
+          background-color: @color-sub;
+          margin-top: 1px;
+          background-position: 0 -45px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 100%;
+          border-radius: 4px;
+        }
+        a:hover{
+          opacity: 0.5;
         }
       }
-      .control{
+      .article{
+        div>ul{
+          position: absolute;
+          top:45px;
+          li>a{
+            background-color: @color-sub;
+          }
+        }
+        .another_category{
+          border: 1px @color-main solid !important;
+          border-radius: 3px;
+          font-weight: 300;
+        }
+        p{
+          margin:20px;
+        }
+      }
+      .tagTrail{
+        border:1px @color-main solid;
+        border-radius:3px;
+        margin:35px 0 0;
+        padding:10px 20px;
+        position:relative;
+        .tagText{
+          border-radius:3px 3px 0 0 ;
+          margin-left:20px;
+          position:absolute;
+          left:0;
+          top:-30px;
+          height:30px;
+          padding:0 15px;
+          background-color: @color-sub;
+          color:@color-white;
+          line-height: 30px;
+        }
         a{
           font-size:12px;
           color:@color-white;
           background-color:@color-main;
           padding:2px 10px;
           border-radius:3px;
-          float: right;
-          margin-right: 10px;
-        }
-        a:first-child{
-          color:@color-white;
-          background-color:@color-sub;
         }
       }
-    }
-    .image{
-      display:block;
-      width:50px;
-      height:50px;
-      border-radius:30px;
-      border: 3px @color-master solid;
-      overflow:hidden;
-      float: left;
-      margin-right: 10px;
-      img{
-        width:100%;
-        outline:2px @color-master solid;
+      .comment{
+        margin-top:30px;
+        .commentList{
+          border:1px @color-main solid;
+          border-radius: 1px;
+          >ol>li{
+            overflow: hidden;
+            margin: 10px 10px;
+            span.date{
+              color: @color-sub;
+            }
+            p{
+              overflow: hidden;
+              margin: 10px 10px;
+            }
+
+            li{
+              margin-left:68px;
+              overflow: hidden;
+              p{
+                margin:10px 10px;
+                overflow: hidden;
+              }
+            }
+
+            div{
+              overflow: hidden;
+            }
+          }
+          div span{
+            overflow: hidden;
+            margin: 10px 10px;
+            p{
+              margin-left: 68px;
+              border: 1px @color-font solid;
+              overflow: hidden;
+            }
+          }
+        }
+        .commentWrite{
+          p>textarea{
+            display: block;
+            height: 80px;
+            margin:10px auto;
+            width: 780px;
+            border: 1px @color-main solid;
+            border-radius: 3px;
+            padding: 10px 10px;
+          }
+          p.submit {
+            text-align: right;
+            input[type="submit"]{
+              border: 0;
+              vertical-align: middle;
+              line-height: 30px;
+              height: 30px;
+              font-size:12px;
+              color:@color-white;
+              background-color:@color-sub;
+              border-radius:3px;
+              background-repeat: no-repeat;
+              margin-right: 15px;
+            }
+          }
+          div.userInfo{
+            p input{
+              float: left;
+              width: 150px;
+              height: 20px;
+              background-color: @color-main;
+              border-radius: 3px;
+              margin: 10px 5px;
+              padding:0 10px;
+              border: 0 none;
+              color: @color-white;
+            }
+          }
+          p.secretWrap{
+            line-height: 30px;
+            float: right;
+            vertical-align: middle;
+          }
+        }
         .control{
-          float: right;
+          a{
+            font-size:12px;
+            color:@color-white;
+            background-color:@color-main;
+            padding:2px 10px;
+            border-radius:3px;
+            float: right;
+            margin-right: 10px;
+          }
+          a:first-child{
+            color:@color-white;
+            background-color:@color-sub;
+          }
+        }
+      }
+      .image{
+        display:block;
+        width:50px;
+        height:50px;
+        border-radius:30px;
+        border: 3px @color-master solid;
+        overflow:hidden;
+        float: left;
+        margin-right: 10px;
+        img{
+          width:100%;
+          outline:2px @color-master solid;
+          .control{
+            float: right;
+          }
         }
       }
     }
-  }
-<<<<<<< HEAD
-  .paging{
-    text-align:center;
-    padding:20px 0;
-    a.num{
-      color: @color-white;
-      padding:0 5px;
-      border-radius: 5px;
-      font-size:13px;
-      background-color: @color-main;
-      border: 1px @color-main solid;
-    }
-    a{
-      color: @color-font;
-      padding:0 5px;
-      border-radius: 3px;
-      border: 1px @color-font solid;
-      font-size:13px;
-    }
-  }
-  .guestbook{
-    h3{
-      font-weight: 150%;
-      span{
-        border-bottom: 2px @color-sub solid;
-      }
-      color: @color-font;
-      margin: 20px 10px;
-      font-size: 17px;
-    }
-    .guestWrite{
-      margin: 10px 10px;
-      div input{
-        width: 150px;
-        height: 20px;
+
+    .paging{
+      text-align:center;
+      padding:20px 0;
+      a.num{
+        color: @color-white;
+        padding:0 5px;
+        border-radius: 5px;
+        font-size:13px;
         background-color: @color-main;
         border: 1px @color-main solid;
-        border-radius: 3px;
-        margin: 5px 0;
-        padding-right: 10px;
-        border: 0 none;
-        color: @color-white;
-        padding:0 10px;
       }
-      textarea{
-        display: block;
-        width: 98%;
-        margin: 10px auto;
-        border: 1px @color-main solid;
+      a{
+        color: @color-font;
+        padding:0 5px;
         border-radius: 3px;
-        padding:10px 10px;
-        font-size: 13px;
-
-      }
-      input[type="submit"]{
-        background-color: @color-sub;
-        color: @color-white;
-        background-repeat: no-repeat;
-        border: 0 none;
-        width: 90px;
-        height: 25px;
-        border-radius: 3px;
-        line-height: 23px;
+        border: 1px @color-font solid;
+        font-size:13px;
       }
     }
-    .guestList{
-      margin: 10px 10px;
-      ol>li{
-        border: 1px @color-main solid;
-        border-radius: 3px;
-        margin: 20px 0;
-        padding: 10px;
-        width: 98%;
-        li{
-          margin-top: 10px;
-          padding-top: 10px;
-          border-top: 1px @color-main solid ;
+    .guestbook{
+      h3{
+        font-weight: 150%;
+        span{
+          border-bottom: 2px @color-sub solid;
         }
+        color: @color-font;
+        margin: 20px 10px;
+        font-size: 17px;
       }
-      span.name{
-        text-decoration: none;
-        a{color: @color-font;
-        }
-      }
-      span.date{
-        color: @color-sub;
-      }
-      span.control{
-        float: right;
-        a:first-child{
+      .guestWrite{
+        margin: 10px 10px;
+        div input{
+          width: 150px;
+          height: 20px;
           background-color: @color-main;
           border: 1px @color-main solid;
           border-radius: 3px;
+          margin: 5px 0;
+          padding-right: 10px;
+          border: 0 none;
           color: @color-white;
-          font-size: 11px;
-          padding: 1px 5px;
-          margin-right: 5px;
+          padding:0 10px;
         }
-        a{
-          background-color: @color-sub;
+        textarea{
+          display: block;
+          width: 778px;
+          margin: 10px auto;
           border: 1px @color-main solid;
           border-radius: 3px;
+          padding:10px 10px;
+          font-size: 13px;
+
+        }
+        input[type="submit"]{
+          background-color: @color-sub;
           color: @color-white;
-          font-size: 11px;
-          padding: 1px 5px;
-          margin-right: 5px;
+          background-repeat: no-repeat;
+          border: 0 none;
+          width: 90px;
+          height: 25px;
+          border-radius: 3px;
+          line-height: 23px;
         }
       }
-      p{
-        margin-top: 10px;
-      }
-      .date{
-        a{
+      .guestList{
+        margin: 10px 10px;
+        ol>li{
+          border: 1px @color-main solid;
+          border-radius: 3px;
+          margin: 20px 0;
+          padding: 10px;
+          width: 780px;
+          li{
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px @color-main dashed;
+          }
+        }
+        span.name{
+          text-decoration: none;
+          a{color: @color-font;
+          }
+        }
+        span.date{
           color: @color-sub;
-          font-size: 12px;
-          margin: 0 10px;
-          font-weight: bold;
+        }
+        span.control{
+          float: right;
+          a:first-child{
+            background-color: @color-main;
+            border: 1px @color-main solid;
+            border-radius: 3px;
+            color: @color-white;
+            font-size: 11px;
+            padding: 1px 5px;
+            margin-right: 5px;
+          }
+          a{
+            background-color: @color-sub;
+            border: 1px @color-main solid;
+            border-radius: 3px;
+            color: @color-white;
+            font-size: 11px;
+            padding: 1px 5px;
+            margin-right: 5px;
+          }
+        }
+        p{
+          margin-top: 10px;
+        }
+        .date{
+          a{
+            color: @color-sub;
+            font-size: 12px;
+            margin: 0 10px;
+            font-weight: bold;
+          }
         }
       }
     }
-=======
-  span{
-    font-size: 12px;
-    display: block;
-    color:@color-white;
-    margin-bottom:5px;
->>>>>>> origin/master
-  }
-}
 
-#sidebar{
-  margin-left: 710px;
-  font-weight: 400px;
-  div{
-    h3{
-      margin-bottom: 10px;
-      line-height: 150%;
-      span{
-        border-bottom: 2px @color-sub solid;
-        color: @color-sub;
+    #sidebar{
+      margin-right: 810px;
+      font-weight: 400px;
+      div{
+        h3{
+          margin-bottom: 10px;
+          line-height: 150%;
+          span{
+            border-bottom: 2px @color-sub solid;
+            color: @color-sub;
+          }
+        }
+        li>ul>li{
+          margin-left: 5px;
+          line-height: 150%;
+        }
       }
-    }
-    li>ul>li{
-      margin-left: 5px;
-      line-height: 150%;
-    }
-  }
-  .category{
-    ul>li{
-      font-weight: bold;
-      ul>li{
-        font-weight: initial;
+      .category{
+        ul>li{
+          font-weight: bold;
+          ul>li>{
+            font-weight: initial;
+            font-weight: 100;
+          }
+        }
       }
+      .blogImage{
+        text-align: center;
+        img{
+          margin-top:-40px;
+          margin-right: 15px;
+          width: 50%;
+          border-radius: 100px;
+          border: 3px @color-main solid;
+        }
+      }
+      @keyframes cat{
+        0%{transform:translate(0) scale(1.5,1.5);}
+        20%{transform:translate(-100px,-50px); transform:rotate(180deg);}
+        40%{transform:translate(400px, 0);width: 100px;height: 100px;border-radius: 10%;}
+        60%{transform:translate(100px, 50px); transform: rotate(-180deg);}
+        100%{transform:translate:0;}
+      }
+      .blogImage{
+
+        img:hover{
+          animation: cat 10s;
+        }
+      }
+      .blogDesc{
+        margin: 10px 0;
+        color:@color-font;
+      }
+      .search{
+        width: 200px;
+        height: 30px;
+        input.submit{
+          background-repeat: no-repeat;
+          background-color: @color-sub;
+          border: 0 none;
+          color: @color-white;
+          height: 30px;
+          width: 46px;
+          margin:0 -3px;
+          visibility: hidden;
+        }
+        input[type=text]{
+          background-repeat: no-repeat;
+          border: 0 none;
+          height: 28px;
+          padding: 1px 10px;
+          width: 150px;
+          color: @color-sub;
+          border-bottom: 1.5px @color-main dashed;
+        }
+        ::-webkit-input-placeholder { /* Chrome */
+          color: @color-font;
+          opacity: 0.5;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+          color: @color-font;
+          opacity: 0.5;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+          color: @color-font;
+          opacity: 0.5;
+        }
+        :-moz-placeholder { /* Firefox 4 - 18 */
+          color: @color-font;
+          opacity: 0.5;
+        }
+      }
+      div{
+        margin: 10px 10px 20px 20px;
+        h3{
+          color: @color-font;
+        }
+      }
+      .calender{
+        tr{
+          th:first-child{
+            color: @color-sub;
+          }
+          td:first-child{
+            color: @color-sub;
+          }
+          th:last-child{
+            color: #1495CC;
+          }
+          td:last-child{
+            color: #1495CC;
+          }
+        }
+        tbody{
+          text-align: center;
+        }
+      }
+      .counter{
+        >span{
+          text-align: center;
+          font-weight: bold;
+          font-size: 15px;
+          border-bottom: 2px @color-font;
+          >span{
+            color: @color-main;
+          }
+          >span.today{
+            color: @color-sub;
+          }
+        }
+      }
+
     }
   }
-  .blogImage{
-    text-align: center;
-    img{
-      margin-top:-70px;
-      margin-right: 15px;
-      width: 50%;
-      border-radius: 100px;
-      border: 3px @color-main solid;
-    }
-  }
-  @keyframes cat{
-    0%{transform:translate(0);}
-    20%{transform:translate(50px,100px); transform:rotate(180deg);}
-    40%{transform:translate(-360px, 0);width: 100px;height: 100px;border-radius: 10%;}
-    60%{transform:translate(50px, 100px); transform: rotate(-180deg);}
-    100%{transform:translate:0;}
-  }
-  .blogImage{
-    img:hover{
-    animation: cat 8s;
-    }
-  }
-  .blogDesc{
-    margin: 10px 0;
-    color:@color-font;
-  }
-  .search{
-    width: 200px;
-    height: 30px;
-    input.submit{
-      background-repeat: no-repeat;
-      background-color: @color-sub;
-      border: 0 none;
-      color: @color-white;
+  #footer{
+    clear: both;
+    font-size: 11px;
+    div.copyright{
       height: 30px;
-      width: 46px;
-      margin:0 -3px;
-      visibility: hidden;
-    }
-    input[type=text]{
-      background-repeat: no-repeat;
-      border: 0 none;
-      height: 28px;
-      padding: 1px 10px;
-      width: 150px;
-      color: @color-sub;
-      border-bottom: 1.5px @color-main dashed;
-    }
-    ::-webkit-input-placeholder { /* Chrome */
-      color: @color-font;
-      opacity: 0.5;
-    }
-    :-ms-input-placeholder { /* IE 10+ */
-      color: @color-font;
-      opacity: 0.5;
-    }
-    ::-moz-placeholder { /* Firefox 19+ */
-      color: @color-font;
-      opacity: 0.5;
-    }
-    :-moz-placeholder { /* Firefox 4 - 18 */
-      color: @color-font;
-      opacity: 0.5;
-    }
-  }
-  div{
-    margin: 10px 10px 20px 20px;
-    h3{
-      color: @color-font;
-    }
-  }
-  .calender{
-
-    tr{
-      th:first-child{
-        color: @color-sub;
-      }
-      td:first-child{
-        color: @color-sub;
-      }
-      th:last-child{
-        color: #1495CC;
-      }
-      td:last-child{
-        color: #1495CC;
-      }
-    }
-
-    tbody{
+      background-color: @color-main;
+      color:@color-white;
       text-align: center;
-    }
-  }
-  .counter{
-    text-align: center;
-    span{
-      border-bottom: 2px @color-sub solid;
-      font-size: 13px;
-      span.total{
-        color: @color-main;
-      }
-      span.today{
-        color: @color-sub;
-      }
-      span.yesterday{
-        color: @color-font;
-      }
-    }
-  }
-}
-#footer{
-  clear: both;
-  font-size: 11px;
-  div.copyright{
-    height: 30px;
-    background-color: @color-main;
-    color:@color-white;
-    text-align: center;
-    line-height: 30px;
-    a{
       line-height: 30px;
-      color: @color-white;
-      text-align: center;
+      a{
+        line-height: 30px;
+        color: @color-white;
+        text-align: center;
+      }
     }
   }
-}
