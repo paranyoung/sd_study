@@ -41,257 +41,162 @@ ol {
     width: 13px;
   }
 }
-body {
-  height: 100%;
+header {
+  border: 1px #F00 solid;
+  height: 80px;
+  position: relative;
+  z-index: 100;
 }
-.wrap {
+header > div {
+  border: 1px #F00 solid;
+  background-color: #fff;
+  overflow: hidden;
+}
+.gnb {
   height: 80px;
   background-color: #000;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
+  padding: 0 30px;
 }
-.wrap .gnb {
-  width: 100%;
-  height: 195px;
-  position: absolute;
-  top: 80px;
-  outline: 1px #f00 solid;
-  background-color: #ffffff;
-  z-index: 10;
-}
-.wrap .gnb > div {
-  display: block;
-  height: 275px;
-  z-index: 10;
-  position: relative;
-  top: -80px;
-}
-.wrap .gnb > div .logo {
-  height: 100%;
+.gnb .logo {
+  border: 1px #f00 solid;
   float: left;
-  position: absolute;
-  left: 30px;
-  top: 18px;
-  text-align: center;
-  height: 43px;
-  width: 63px;
 }
-.wrap .gnb > div .gnbRight {
-  float: right;
-  display: block;
-  height: 100%;
+.gnb .site-option {
+  border: 1px #f00 solid;
+  height: 80px;
   width: 200px;
+  float: right;
 }
-.wrap .gnb > div .gnbRight .homeMenu .home {
-  width: 40px;
-  height: 35px;
-  display: block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: pointer;
-  position: absolute;
-  top: 22px;
-  right: 106px;
-  z-index: 10;
-}
-.wrap .gnb > div .gnbRight .homeMenu .home span {
-  display: block;
-  background: url('http://www.tkgroup.co.kr/kor/_Img/Layout/home-ico.png') no-repeat center 10px;
-  height: 35px;
-  width: 40px;
-  background-color: #000;
-}
-.wrap .gnb > div .gnbRight .homeMenu .home span:hover {
-  background-color: #565656;
-}
-.wrap .gnb > div .gnbRight .homeMenu .subList {
-  position: absolute;
-  top: 22px;
-  right: 60px;
-  width: 45px;
-  height: 35px;
-  line-height: 1.38em;
-  z-index: 2200;
-}
-.wrap .gnb > div .gnbRight .homeMenu .subList .gnbLang {
-  height: 100%;
-  background-color: #086c6d;
-  display: block;
-  cursor: pointer;
-}
-.wrap .gnb > div .gnbRight .homeMenu .subList .gnbLang span {
-  color: #fff;
-  height: 100%;
-  display: block;
-  font-size: 12px;
-  text-align: center;
-  line-height: 35px;
-}
-.wrap .gnb > div .gnbRight .homeMenu .subList .gnbLang:hover {
-  background-color: #199394;
-}
-.wrap .gnb > div .gnbRight .bt_mnail {
-  display: block;
-  position: absolute;
-  right: 10px;
-  top: 22px;
-  overflow: hidden;
-  width: 40px;
-  height: 36px;
-  background: none;
-  z-index: 2300;
-}
-.wrap .gnb > div .gnbRight .bt_mnail a .line01 {
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  position: absolute;
-  right: 10px;
-  top: 9px;
-}
-.wrap .gnb > div .gnbRight .bt_mnail a .line02 {
-  width: 16px;
-  height: 2px;
-  background: #fff;
-  position: absolute;
-  right: 10px;
-  top: 17px;
-}
-.wrap .gnb > div .gnbRight .bt_mnail a .line03 {
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  position: absolute;
-  right: 10px;
-  top: 25px;
-}
-.wrap .gnb > div .gnbRight .bt_mnail:hover .line01 {
-  width: 10px;
-  animation: down 3s infinite ;
-}
-.wrap .gnb > div .gnbRight .bt_mnail:hover .line02 {
-  width: 22px;
-  animation: up 3s infinite ;
-}
-.wrap .gnb > div .gnbRight .bt_mnail:hover .line03 {
-  width: 10px;
-  animation: down 3s infinite ;
-}
-.wrap .gnb > div .navi {
-  height: 275px;
-  margin: 0 auto;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-.wrap .gnb > div .navi .naviWrap {
-  height: 100%;
-  margin: 0 auto;
+.gnb .menu {
+  border: 1px #f00 solid;
+  height: 80px;
   width: 1100px;
+  margin: 0 auto;
 }
-.wrap .gnb > div .navi .naviWrap .top_menu {
-  list-style: none;
-  position: relative;
+.site-option {
   font-size: 0;
-  margin: 0 auto;
 }
-.wrap .gnb > div .navi .naviWrap .top_menu:after {
-  content: "";
-  display: block;
-  width: 220px;
-  height: 3px;
-  background-color: #086c6d;
-  position: absolute;
-  bottom: 0;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li {
-  width: 220px;
-  height: 100%;
-  display: inline-block;
-  position: relative;
-  list-style: none;
-  font-size: 16px;
-  line-height: 80px;
-  margin: 0 auto;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > a {
-  height: 100%;
-  display: block;
-  padding: 0 15px;
-  color: #fff;
+.site-option a {
   text-align: center;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > a:hover {
-  color: #086c6d;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul.naviMenu01 {
-  border-left: 1px #eaeaea solid;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul {
-  position: absolute;
-  height: 145px;
-  width: 220px;
-  padding: 25px 0;
-  border-right: 1px #eaeaea solid;
-  z-index: 30;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li {
-  display: block;
-  text-align: center;
-  position: relative;
-  color: #333;
-  white-space: nowrap;
-  line-height: 1.3em;
-  margin: 5px 0;
-  width: 220px;
-  height: 30px;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li:hover ul {
-  display: block;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li > a {
-  position: relative;
-  line-height: inherit;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li > a > span {
-  display: block;
-  line-height: inherit;
-  font-weight: 400;
-  white-space: nowrap;
   font-size: 14px;
-  color: #333;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li > a > span:hover {
-  color: #086c6d;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li > a:hover .txt {
-  width: 220px;
-  background-color: #086c6d;
-}
-.wrap .gnb > div .navi .naviWrap .top_menu > li > ul > li > a .txt {
-  width: 0px;
-  height: 1px;
-  background-color: #086c6d;
-  transition: 1s;
   display: inline-block;
-  position: relative;
-  bottom: 6px;
+  vertical-align: top;
+  height: 35px;
+  outline: 1px #F00 solid;
 }
-.main01 {
+.site-option .home {
+  width: 40px;
+  text-indent: -9999px;
+  background-color: #666;
+  background-image: url(http://www.tkgroup.co.kr/kor/_Img/Layout/home-ico.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-option .lang-en {
+  width: 45px;
+  line-height: 35px;
+  color: #FFF;
+  background-color: #086c6d;
+}
+.site-option .sitemap {
+  text-align: right;
+  width: 40px;
+}
+.site-option .sitemap span {
+  line-height: 100%;
+  position: relative;
+  left: 4px;
+  top: 2px;
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+}
+.site-option .sitemap:hover span:first-child {
+  animation: aniline1 1s infinite;
+}
+.site-option .sitemap:hover span:first-child + span {
+  animation: aniline1 1s infinite;
+}
+.site-option .sitemap:hover span:first-child + span + span {
+  animation: aniline1 1.5s infinite;
+}
+@keyframes aniline1 {
+  0% {
+    width: 32px;
+  }
+  50% {
+    width: 22px;
+  }
+  100% {
+    width: 32px;
+  }
+}
+@keyframes aniline2 {
+  0% {
+    width: 22px;
+  }
+  80% {
+    width: 32px;
+  }
+  100% {
+    width: 22px;
+  }
+}
+.menu > ul > li {
+  outline: 1px #F00 solid;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+.menu > ul > li > a {
+  line-height: 80px;
+  color: #FFF;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+}
+.menu > ul > li > div {
+  display: none;
+  padding: 30px 0;
+}
+.menu > ul > li > div > ul > li {
+  line-height: 45px;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    position: static;
+  }
+  header > div {
+    overflow: visible;
+  }
+  header .gnb .menu {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 223px;
+    background-color: #FFF;
+  }
+  header .gnb .menu > ul > li {
+    background-color: #FFF;
+  }
+  header .gnb .menu > ul > li > a {
+    color: #000;
+    line-height: 68px;
+  }
+}
+.container .main01 {
   height: 100%;
   border: 1px #666 solid;
+  z-index: -1;
+  position: relative;
 }
-.main01 .video_container {
+.container .main01 .video_container {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-.main01 .video_container span {
+.container .main01 .video_container span {
   margin: 0 auto;
   position: absolute;
   width: 100%;
@@ -301,17 +206,18 @@ body {
   text-align: center;
 }
 .main02 {
-  height: 500px;
   width: 100%;
 }
 .main02 .m_about ul {
-  height: 100%;
+  font-size: 0;
   width: 100%;
 }
 .main02 .m_about ul li {
   width: 33.3333333%;
-  float: left;
+  display: inline-block;
+  font-size: initial;
   overflow: hidden;
+  vertical-align: top;
   transition: 1s;
   position: relative;
 }
@@ -423,13 +329,13 @@ body {
 }
 .main03 {
   height: 900px;
-  outline: 1px #f00 solid;
 }
-.main03 .m-golbal {
+.main03 .m-global {
   position: relative;
   height: 100%;
+  background: #1d2227 url('http://www.tkgroup.co.kr/kor/_Img/Main/global-bg.jpg') repeat-x;
 }
-.main03 .m-golbal h3 {
+.main03 .m-global h3 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.05em;
@@ -438,4 +344,13 @@ body {
   color: #fff;
   line-height: 1;
   padding-top: 100px;
+}
+.main03 .m-global .m-global01 {
+  position: absolute;
+  top: 236px;
+  left: 50%;
+  margin-left: -666px;
+}
+.main03 .m-global .m-global01 img {
+  vertical-align: middle;
 }

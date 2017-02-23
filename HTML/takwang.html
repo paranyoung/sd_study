@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>태광실업</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
 
-    <script type="text/javascript">
-    // $(function(){
-    //         $('.gnb').hover(function(){
-    //             $('header>div').animate({
-    //                 "height":"200px"
-    //             })
-    //         },function(){
-    //             $('header>div').animate({
-    //                 "height":"0"
-    //             })
-    //         })
-    //     })
-    $(function(){
+      <script>
+          $(function(){
 
-     });
+              $('.menu>ul>li').hover(function(){
+                  $('.menu>ul>li').children('div').stop().slideDown()
 
-    </script>
+              },function(){
+                  $('.menu>ul>li').children('div').stop().slideUp()
+              })
 
+          });
+      </script>
     <style type="text/css">
+
 
     *{margin:0;padding:0;}
     ul,ol{list-style:none;}
@@ -39,6 +40,7 @@
     header>div{
        border:1px #F00 solid;
        background-color: #fff;
+       overflow: hidden;
      }
 
      .gnb{
@@ -70,6 +72,13 @@
        text-align: center;
        float: left;
      }
+     .gnb .menu>ul>li div{
+       padding: 30px 0;
+       display: none;
+     }
+     .gnb .menu>ul>li li{
+       line-height: 45px;
+     }
      .gnb .menu>ul>li>a{
        line-height: 80px;
        color: #fff;
@@ -86,6 +95,8 @@
         font-size: 14px;
         display: inline-block;
         height: 35px;
+        vertical-align: top;
+        outline: 1px #f00 solid;
       }
       .gnb .site-option a.home{
         width: 40px;
@@ -103,26 +114,73 @@
       }
       .gnb .site-option a.sitemap{
         width: 40px;
+        text-align: right;
       }
       .gnb .site-option a.sitemap span{
+        line-height: 100%;
         position: relative;
-        left:3px;
+        left:4px;
         top: 2px;
         display: block;
-        width: 22px;
-        height: 2px;
+        width: 32px;
+        height: 4px;
         background-color: #fff;
-        margin: 3px 0;
+        display: inline-block;
+      }
+      .gnb .site-option a.sitemap:hover span:first-child{
+        animation: aniline1 1s infinite;
+      }
+      .gnb .site-option a.sitemap:hover span:first-child+span{
+        animation: aniline2 1s infinite;
+      }
+      .gnb .site-option a.sitemap:hover span:first-child+span+span{
+        animation: aniline1 1.5s infinite;
+      }
+      @keyframes aniline1 {
+        0%{width: 22px;}
+        50%{width: 32px;}
+        100%{width: 22px;}
+      }
+      @keyframes aniline2{
+        0%{width: 15px;}
+        80%{width: 32px;}
+        100%{width: 5px;}
       }
 
      .intro{
        background-color: #CCC;
        height:300px;
        position: relative;
-       z-index: 1;
+       z-index: -1;
      }
 
+  @media screen and (max-width:1000px){
 
+  header{
+    position: static;
+  }
+  header>div{
+    overflow: hidden;
+  }
+
+    .gnb .menu{
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 223px;
+      background-color: #fff;
+  }
+
+    .gnb .menu>ul>li{
+    background-color: #ffffff;
+
+  }
+    .gnb .menu>ul>li>a{
+    color: #000;
+    line-height: 68px;
+    background-color: #ffffff;
+  }
+}
     </style>
   </head>
   <body>
@@ -136,17 +194,50 @@
             <a href="#" class="home">home</a>
             <a href="#" class="lang-en">ENG</a>
             <a href="#" class="sitemap">
-              <spa></spa>
-              <spa></spa>
-              <spa></spa>
+              <span></span>
+              <span></span>
+              <span></span>
             </a>
           </div>
           <div class="menu">
             <ul>
-              <li><a href="#">company</a></li>
-              <li><a href="#">management innovation</a></li>
-              <li><a href="#">portfolio</a></li>
-              <li><a href="#">sustainability management</a></li>
+              <li><a href="#">company</a>
+                <div>
+                  <ul>
+                    <li><a href="#">회사개요</a></li>
+                    <li><a href="#">CEO인사말</a></li>
+                    <li><a href="#">회사 연혁</a></li>
+                    <li><a href="#">관계사 안내</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">management innovation</a>
+                <div class="">
+                  <ul>
+                    <li><a href="#">비전</a></li>
+                    <li><a href="#">TK WAY</a></li>
+                    <li><a href="#">LEAN</a></li>
+                    <li><a href="#">TPM</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">portfolio</a>
+                <div class="">
+                  <ul>
+                    <li><a href="#">포트폴리오</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">sustainability management</a>
+                <div class="">
+                  <ul>
+                    <li><a href="#">SM</a></li>
+                    <li><a href="#">지속가능 경영보고서</a></li>
+                    <li><a href="#">정산장학재단</a></li>
+                    <li><a href="#">장학생지원</a></li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="#">recruit</a></li>
             </ul>
           </div>
